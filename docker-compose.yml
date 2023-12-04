@@ -15,6 +15,9 @@ services:
       - wxcloud=eddi-public-wechat
       - role=container
     environment:
+      - MYSQL_USERNAME=root
+      - MYSQL_PASSWORD=Rc19931020
+      - MYSQL_ADDRESS=sh-cynosdbmysql-grp-3jmr69ni.sql.tencentcdb.com:25637
       - MYSQL_USERNAME=
       - MYSQL_PASSWORD=
       - MYSQL_ADDRESS=
