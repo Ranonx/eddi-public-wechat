@@ -1,0 +1,28 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <img src="{% static 'images/logo.svg' %}" alt="Logo" class="logo" />
+        <h1 class="title">矫形器系列</h1>
+      </div>
+    </header>
+    <div class="container">
+      {% for banner in banners %}
+      <div class="banner">
+        <a href="{{ banner.link }}">
+          <img src="{% static banner.image %}" alt="{{ banner.alt_text }}" />
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+    <footer>
+      <p>版权所有©️2023伊甸数智医疗科技</p>
+    </footer>
+  </body>
+</html>

@@ -9,6 +9,19 @@ from wxcloudrun.models import Counters
 logger = logging.getLogger('log')
 
 
+
+def home(request):
+    banners = [
+        {'link': 'poster1.html', 'image': 'images/banner1.png', 'alt_text': 'Banner 1'},
+        {'link': 'poster2.html', 'image': 'images/banner2.png', 'alt_text': 'Banner 2'},
+        {'link': 'poster3.html', 'image': 'images/banner3.png', 'alt_text': 'Banner 3'},
+        {'link': 'poster4.html', 'image': 'images/banner4.png', 'alt_text': 'Banner 4'},
+        {'link': 'poster5.html', 'image': 'images/banner5.png', 'alt_text': 'Banner 5'},
+        # Add other banners similarly
+    ]
+    return render(request, 'home.html', {'banners': banners})
+ 
+
 def index(request, _):
     """
     获取主页
